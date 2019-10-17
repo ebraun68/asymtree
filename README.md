@@ -1,7 +1,11 @@
-# asymtree.pl
-Program to calculate gene tree spectrum for an asymmetric rooted four-taxon species tree
+# Programs used in Tiley et al. submitted
+-----------------------------------------
+Tiley, G. P., Pandey, A., Kimball, R. T., Braun, E. L. & Burleigh, J. G. (submitted). Whole 
+genome phylogeny of Gallus: Introgression and data-type effects
 
-This program calculates the expected gene tree spectrum for the rooted species tree (((AB)C)D);
+-----------------------------------------
+"asymtree.pl" returns the expected gene tree spectrum for an asymmetric rooted four-taxon species 
+tree. It calculates the expected gene tree spectrum for the rooted species tree (((AB)C)D);
 
 Simply invoke the program as follows:
 
