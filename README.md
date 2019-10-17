@@ -9,7 +9,7 @@ tree. It calculates the expected gene tree spectrum for the rooted species tree 
 
 Simply invoke the program as follows:
 
-./asymtree.pl T2 T3\n";
+./asymtree.pl T2 T3
 
 Where T2 and T3 are branch lengths in coalescent units. T2 is the length of the branch uniting
 taxa A and B; T3 is the length of the branch uning taxa A, B, and C. In newick format, the tree
@@ -61,3 +61,30 @@ file (outfile.tv.nex) with purines and pyrimidines coded as 0 and 1, respectivel
 coding will render some sites uninformative; this can be addressed by opening the .tv.nex file in
 PAUP*, excluding uninformative sites, and exporting a new file.
 
+-----------------------------------------
+"perfect_Gallus_tv2tree.pl" is used to convert perfect transversions into partially resolved gene
+trees. This program is "hard wired" in that it assumes the following five taxa:
+
+Btho = Bambusicola thoracicus (Chinese bamboo partridge)
+Gvar = Gallus varius (Green junglefowl)
+Ggal = Gallus gallus (Red junglefowl)
+Gson = Gallus sonneratii (Grey junglefowl)
+Glaf = Gallus lafayetii (Sri Lankan junglefowl)
+
+The program will read a relaxed phylip format infile with binary (RY) data and convert the data
+to bipartition strings, which correspond to the following trees.
+
+- 00111 = (Btho,Gvar,(Ggal,Gson,Glaf));
+- 01011 = (Btho,Ggal,(Gvar,Gson,Glaf));
+- 01101 = (Btho,Gson,(Gvar,Ggal,Glaf));
+- 01110 = (Btho,Glaf,(Gvar,Ggal,Gson));
+- 00011 = (Btho,Gvar,Ggal,(Gson,Glaf));
+- 00110 = (Btho,Gvar,Glaf,(Ggal,Gson));
+- 01100 = (Btho,Gson,Glaf,(Gvar,Ggal));
+- 01010 = (Btho,Ggal,Glaf,(Gvar,Gson));
+- 01001 = (Btho,Ggal,Gson,(Gvar,Glaf));
+- 00101 = (Btho,Gvar,Gson,(Ggal,Glaf));
+		
+Thee first 0 in the bipartition string represents the state in Btho (either R or Y) and subsequent 
+0/1 indicators provide information regarding the state in the four junglefowl species. The taxon order 
+in all strings is Btho Gvar Ggal Gson Glaf
