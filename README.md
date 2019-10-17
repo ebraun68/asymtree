@@ -9,7 +9,7 @@ tree. It calculates the expected gene tree spectrum for the rooted species tree 
 
 Simply invoke the program as follows:
 
-./asymtree.pl <T2> <T3>\n";
+./asymtree.pl T2 T3\n";
 
 Where T2 and T3 are branch lengths in coalescent units. T2 is the length of the branch uniting
 taxa A and B; T3 is the length of the branch uning taxa A, B, and C. In newick format, the tree
@@ -52,10 +52,12 @@ parsimony informative sites in columns with only two states and no gaps.
 
 It is straightforard to run; simply invoke the program as follows: 
 
-./perfect_sites.pl <infile> <outfile>
+./perfect_sites.pl infile outfile
+
+NOTE: outfile is simply a prefix. The program actually generates two nexus files (see below)
   
-The output is two nexus files, one for all perfect sites (<outfile>.all.nex) and a second nexus
-file (<outfile>.tv.nex) with purines and pyrimidines coded as 0 and 1, respectively. The binary
+The output is two nexus files, one for all perfect sites (outfile.all.nex) and a second nexus
+file (outfile.tv.nex) with purines and pyrimidines coded as 0 and 1, respectively. The binary
 coding will render some sites uninformative; this can be addressed by opening the .tv.nex file in
 PAUP*, excluding uninformative sites, and exporting a new file.
 
