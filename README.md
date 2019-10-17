@@ -14,15 +14,15 @@ would be (((A,B):T3, C):T2, D);
 The output is a list of the 15 possible gene trees with the expected proportion of gene trees
 with that topology. For example, running the program with T2 = T3 = 0.5 yields:
 
-Species tree:
-  (((A,B):0.5, C):0.5, D)
-
-Expected proportion of each gene tree:
-  ((AB)(CD)) -- 0.133345019529159
-  ((AC)(BD)) -- 0.0537946133487619
-  ((AD)(BC)) -- 0.0537946133487619
-* (((AB)C)D) -- 0.321437560953448
-  (((AB)D)C) -- 0.12582639268268
+# Species tree:
+#  (((A,B):0.5, C):0.5, D)
+#
+# Expected proportion of each gene tree:
+#   ((AB)(CD)) -- 0.133345019529159
+#   ((AC)(BD)) -- 0.0537946133487619
+#   ((AD)(BC)) -- 0.0537946133487619
+# * (((AB)C)D) -- 0.321437560953448
+#   (((AB)D)C) -- 0.12582639268268
   (((AC)B)D) -- 0.0870690330268755
   (((AC)D)B) -- 0.0462759865022834
   (((AD)B)C) -- 0.00751862684647848
