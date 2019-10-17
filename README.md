@@ -1,7 +1,7 @@
 # Programs used in Tiley et al. submitted
 -----------------------------------------
 Tiley, G. P., Pandey, A., Kimball, R. T., Braun, E. L. & Burleigh, J. G. (submitted). Whole 
-genome phylogeny of Gallus: Introgression and data-type effects
+genome phylogeny of Gallus: Introgression and data-type effects.
 
 -----------------------------------------
 "asymtree.pl" returns the expected gene tree spectrum for an asymmetric rooted four-taxon species 
