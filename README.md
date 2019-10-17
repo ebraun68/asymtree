@@ -39,8 +39,23 @@ And it will yield the following list of gene trees:
 - (((CD)A)B) -- 0.00751862684647848
 - (((CD)B)A) -- 0.00751862684647848
   
-The speciodendric gene tree is indicated using an asteriske. The expected proportions of each 
-gene tree are calculated using the equations in Table V of Rosenberg (2002).
+The speciodendric gene tree is indicated using an asterisk. The expected proportions of each gene
+tree are calculated using the equations in Table V of Rosenberg (2002).
 
 Rosenberg, N. A. (2002). The probability of topological concordance of gene trees and species trees. 
 Theoretical population biology, 61(2), 225-247. https://doi.org/10.1006/tpbi.2001.1568
+
+-----------------------------------------
+"perfect_sites.pl" is a simple program that extracts "perfect sites" from a relaxed phylip format
+input file (assumed to comprise only the parsimony informative sites). We define perfect sites as
+parsimony informative sites in columns with only two states and no gaps.
+
+It is straightforard to run; simply invoke the program as follows: 
+
+./perfect_sites.pl <infile> <outfile>
+  
+The output is two nexus files, one for all perfect sites (<outfile>.all.nex) and a second nexus
+file (<outfile>.tv.nex) with purines and pyrimidines coded as 0 and 1, respectively. The binary
+coding will render some sites uninformative; this can be addressed by opening the .tv.nex file in
+PAUP*, excluding uninformative sites, and exporting a new file.
+
