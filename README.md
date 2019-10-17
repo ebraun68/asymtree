@@ -72,7 +72,7 @@ Gson = Gallus sonneratii (Grey junglefowl)
 Glaf = Gallus lafayetii (Sri Lankan junglefowl)
 
 The program will read a relaxed phylip format infile with binary (RY) data and convert the data
-to bipartition strings, which correspond to the following trees.
+to bipartition strings, which correspond to the following trees:
 
 - 00111 = (Btho,Gvar,(Ggal,Gson,Glaf));
 - 01011 = (Btho,Ggal,(Gvar,Gson,Glaf));
@@ -88,3 +88,8 @@ to bipartition strings, which correspond to the following trees.
 Thee first 0 in the bipartition string represents the state in Btho (either R or Y) and subsequent 
 0/1 indicators provide information regarding the state in the four junglefowl species. The taxon order 
 in all strings is Btho Gvar Ggal Gson Glaf
+
+The trees were used as input for ASTRAL III (Zhang et al. 2018).
+
+Zhang, C., Rabiee, M., Sayyari, E., & Mirarab, S. (2018). ASTRAL-III: polynomial time species tree 
+reconstruction from partially resolved gene trees. BMC bioinformatics, 19(6), 153.
