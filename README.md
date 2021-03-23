@@ -1,4 +1,4 @@
-# Programs used in Tiley et al. submitted
+# Programs used in Tiley et al. (2020)
 -----------------------------------------
 Tiley, G. P., Pandey, A., Kimball, R. T., Braun, E. L. & Burleigh, J. G. (2020). Whole 
 genome phylogeny of Gallus: Introgression and data-type effects. Avian Research 11: 7.
