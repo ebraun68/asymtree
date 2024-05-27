@@ -46,6 +46,19 @@ tree are calculated using the equations in Table V of Rosenberg (2002).
 Rosenberg, N. A. (2002). The probability of topological concordance of gene trees and species trees. 
 Theoretical population biology, 61(2), 225-247. https://doi.org/10.1006/tpbi.2001.1568
 
+In addition to asymtree.pl, I provide a simple perl script called symtree.pl that perfoms the same
+calculation for a symmetric species tree. It was not used in Tiley et al. (2020) because the Gallus
+species tree is asymmetric, but it is provided because it may be useful to others.
+
+symtree.pl is used in the same way as asymtree.pl. Obviously, the values for T2 and T3 are mapped
+onto the species tree in a different manner (because the topology is different). In the case of
+symtree.pl they map onto the tree as follows:
+
+(((A,B):T3+T2, (C,D)):T2)
+
+If you have a rooted four-taxon species tree with coalescent branch lengths simply use the shorter
+branch length as T2 and set T3 to the longer branch length minus T2.
+
 -----------------------------------------
 "perfect_sites.pl" is a simple program that extracts "perfect sites" from a relaxed phylip format
 input file (assumed to comprise only the parsimony informative sites). We define perfect sites as
